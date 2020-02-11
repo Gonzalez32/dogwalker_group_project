@@ -1,0 +1,9 @@
+<h1>New appointment</h1>
+
+<%= form_for @appointment do |t| %>
+    <%= t.label :client %>
+    <%= t.text_field :client%>
+    <br>
+    <%= t.collection_select() %>
+    <%= t.submit %>
+<% end %>
