@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_02_10_232016) do
 
+  create_table "appointments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dogwalker_id"
+    t.string "date_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "dog_walkers", force: :cascade do |t|
     t.string "name"
     t.integer "rating"
