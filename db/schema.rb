@@ -10,8 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2020_02_10_222534) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dogwalker_id"
+    t.string "date_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
@@ -20,8 +27,5 @@ ActiveRecord::Schema.define(version: 2020_02_10_222534) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-=======
-ActiveRecord::Schema.define(version: 0) do
->>>>>>> Stashed changes
 
 end
